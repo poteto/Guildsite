@@ -47,7 +47,7 @@ def profile(request):
 def submit_apply(request):
     mUrl = GuildSetting.objects.get(key='discordhook').value
 
-    player_content = "*** Discord ID *** : " + request.POST['discord_name']
+    player_content = "*** Discord ID *** : @" + request.POST['discord_name']
     player_content += "\n" + request.POST['playtime']
     player_content += "\n *** Character Details ***" 
     player_content += "\n" + request.POST['character_name'] + " iLevel "
